@@ -3,6 +3,7 @@ import "./globals.css";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { Oswald } from "next/font/google";
 import { AppSidebar } from "@/components/app-sidebar";
+import { GraduationCap } from "lucide-react";
 
 export const metadata = {
   title: "Create Next App",
@@ -20,8 +21,15 @@ export default function RootLayout({ children }) {
       <body
         className={`${oswald.className} antialiased dark`}
       >
+      <div className="w-full flex justify-center bg-gray-700/30 p-4">
+      <div className="flex items-center">
+      <GraduationCap  size={40} />
+      <h1 className="text-2xl">DevCMS</h1>
+      </div>
+      </div>
         <SidebarProvider>
           <AppSidebar />
+            
              <main className="w-full">
                <SidebarTrigger />
                 {children}
